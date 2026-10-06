@@ -1,0 +1,371 @@
+/* ===== 1. GENERAL (night-time mall look) ===== */
+:root { --neon: #ff4f9a; --wall: #140b17; --wall2: #1d1022; }
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: #f4e9ee;
+  overflow: hidden;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: "Tilt Neon", "Trebuchet MS", sans-serif;
+}
+
+.text-muted { color: #b9a5b2 !important; }
+
+/* ===== MALL FLOOR ===== */
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34px;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    conic-gradient(
+      #2a1830 25%,
+      #0d060f 0 50%,
+      #2a1830 0 75%,
+      #0d060f 0
+    ) 0 0 / 34px 34px;
+  border-top: 2px solid var(--neon);
+}
+
+/* ===== 2. NAVBAR ===== */
+.mall-nav {
+  background: #0b050d;
+  border-bottom: 2px solid #ff4f9a;
+  box-shadow: 0 0 14px #ff4f9a;
+}
+
+.mall-nav .navbar-brand {
+  color: #ff7ab6;
+  text-shadow: 0 0 8px #ff4f9a;
+}
+
+.mall-nav .nav-link { color: #e9d7e2; }
+
+.mall-nav .nav-link:hover {
+  color: #3de7ff;
+  text-shadow: 0 0 8px #3de7ff;
+}
+
+/* ===== 3. MALL (sections side by side) ===== */
+#mall {
+  display: flex;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.store {
+  min-width: 100vw;
+  height: 100vh;
+  padding: 90px 8vw 90px;
+  overflow-y: auto;
+  border-right: 3px solid #2a1830;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      #2c1333 0%,
+      var(--wall) 65%
+    );
+}
+
+/* Every store gets its own neon colour */
+.store:nth-child(2) { --neon: #3de7ff; }
+.store:nth-child(3) { --neon: #ffb938; }
+.store:nth-child(4) { --neon: #ff4f9a; }
+.store:nth-child(5) { --neon: #b88cff; }
+.store:nth-child(6) { --neon: #5dffa6; }
+.store:nth-child(7) { --neon: #ff6b6b; }
+
+/* ===== 4. NEON SIGN ===== */
+.sign {
+  display: inline-block;
+  color: var(--neon);
+  padding: 8px 22px;
+  margin-bottom: 26px;
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border: 3px solid var(--neon);
+  border-radius: 12px;
+  text-shadow:
+    0 0 6px var(--neon),
+    0 0 16px var(--neon);
+  box-shadow:
+    0 0 8px var(--neon),
+    0 0 22px var(--neon),
+    inset 0 0 10px var(--neon);
+}
+
+/* ===== 5. ENTRANCE ===== */
+.entrance {
+  text-align: center;
+  padding-top: 56px;
+}
+
+.entrance-body {
+  padding-top: 22px;
+}
+
+.awning {
+  height: 56px;
+  margin: 0 -8vw;
+  border-radius: 0 0 40px 40px / 0 0 22px 22px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ff4f9a 0 40px,
+      #1a0d1e 40px 80px
+    );
+  box-shadow: 0 6px 18px #ff4f9a;
+}
+
+.neon {
+  display: inline-block;
+  font-size: 2.4rem;
+  letter-spacing: 4px;
+  color: #ffe3ef;
+  padding: 12px 26px;
+  border: 3px solid #ff4f9a;
+  border-radius: 14px;
+  text-shadow:
+    0 0 6px #ff4f9a,
+    0 0 18px #ff4f9a,
+    0 0 36px #ff4f9a;
+  box-shadow:
+    0 0 10px #ff4f9a,
+    0 0 30px #ff4f9a,
+    inset 0 0 12px #ff4f9a;
+  animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+  0%, 92%, 96%, 100% { opacity: 1; }
+  94%, 98% { opacity: 0.55; }
+}
+
+.entrance h2 {
+  color: #3de7ff;
+  text-shadow: 0 0 10px #3de7ff;
+  margin-top: 20px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ffb938;
+  text-shadow: 0 0 8px #ffb938;
+}
+
+/* ===== 6. NEON BUTTONS ===== */
+.btn-neon {
+  background: transparent;
+  color: var(--neon);
+  border: 2px solid var(--neon);
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--neon);
+  text-shadow: 0 0 6px var(--neon);
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+  background: var(--neon);
+  color: #140b17;
+  text-shadow: none;
+  box-shadow: 0 0 20px var(--neon);
+}
+
+/* ===== 7. DIRECTORY BOARD ===== */
+.directory {
+  max-width: 580px;
+  margin: 28px auto 0;
+  padding: 16px;
+  background: rgba(0,0,0,0.45);
+  border: 2px solid #3de7ff;
+  border-radius: 12px;
+  box-shadow:
+    0 0 16px #3de7ff55,
+    inset 0 0 12px #3de7ff33;
+}
+
+.dir-title {
+  color: #3de7ff;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.dir-btn {
+  width: 100%;
+  text-align: left;
+  line-height: 1.2;
+  color: #f4e9ee;
+  background: #1d1022;
+  border: 1px solid #4a2b55;
+}
+
+.dir-btn small {
+  display: block;
+  color: #9c849a;
+}
+
+.dir-btn:hover {
+  border-color: #3de7ff;
+  color: #3de7ff;
+  box-shadow: 0 0 10px #3de7ff;
+  background: #1d1022;
+}
+
+/* ===== 8. ABOUT (mirror frame) ===== */
+.mirror {
+  width: 190px;
+  height: 250px;
+  margin: auto;
+  border: 4px solid var(--neon);
+  border-radius: 95px 95px 12px 12px;
+  background: #0d060f;
+  color: #b9a5b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  box-shadow:
+    0 0 16px var(--neon),
+    inset 0 0 16px var(--neon);
+}
+
+.mirror img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== 9. SKILL TAGS ===== */
+.tag {
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--wall2);
+  border: 2px dashed var(--neon);
+  color: #fff;
+}
+
+.tag:hover {
+  box-shadow: 0 0 12px var(--neon);
+  transform: rotate(-3deg);
+}
+
+.tag.soft {
+  border-style: solid;
+}
+
+/* ===== 10. CARDS ===== */
+.card {
+  background: var(--wall2);
+  border: 2px solid var(--neon);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #0008;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 0 18px var(--neon);
+}
+
+/* PROJECT IMAGE BOX */
+.img-box {
+  height: 180px;
+  width: 100%;
+  background: #0d060f;
+  color: #b9a5b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px dashed var(--neon);
+  padding: 0;
+}
+
+/* MAKE PROJECT IMAGE FIT INSIDE THE BOX */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* If you want the ENTIRE website screenshot visible without cropping,
+   change object-fit: cover above to object-fit: contain. */
+.img-box img.contain {
+  object-fit: contain;
+}
+
+/* ===== CARD CONTENT ===== */
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  margin-bottom: 8px;
+}
+
+.card-text {
+  line-height: 1.5;
+}
+
+/* ===== FORM ===== */
+.form-control {
+  background: #0d060f;
+  border: 1px solid #4a2b55;
+  color: #fff;
+}
+
+.form-control:focus {
+  background: #0d060f;
+  color: #fff;
+  border-color: var(--neon);
+  box-shadow: 0 0 8px var(--neon);
+}
+
+/* ===== 11. PREVIOUS / NEXT ===== */
+.arrow {
+  position: fixed;
+  bottom: 48px;
+  z-index: 1000;
+  --neon: #3de7ff;
+  background: #140b17;
+}
+
+#prevBtn { left: 15px; }
+#nextBtn { right: 15px; }
+
+/* ===== 12. RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .store {
+    padding: 80px 5vw 100px;
+  }
+
+  .neon {
+    font-size: 1.2rem;
+    padding: 10px 14px;
+    letter-spacing: 2px;
+  }
+
+  .sign {
+    font-size: 1rem;
+  }
+
+  .img-box {
+    height: 180px;
+  }
+}
