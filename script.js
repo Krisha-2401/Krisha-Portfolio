@@ -1,4 +1,4 @@
-// Krisha Patel portfolio — vanilla JS
+ // Krisha Patel portfolio — vanilla JS
 (function () {
   'use strict';
   document.documentElement.classList.add('js');
