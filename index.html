@@ -1,809 +1,215 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Krisha's Portfolio Mall</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Tilt+Neon&display=swap" rel="stylesheet">
-
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krisha Patel — Computer Science Engineering Student &amp; Web Developer</title>
+<meta name="description" content="Portfolio of Krisha Patel, a Computer Science Engineering student building thoughtful web experiences. Projects: The 4 PM Cafe, Style Studio and Vibescape.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121110'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='%23c8ad7f' font-family='Georgia,serif'%3EKP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- ================= NAVBAR ================= -->
-
-<nav class="navbar navbar-expand-md fixed-top mall-nav">
-
-  <div class="container-fluid">
-
-    <span class="navbar-brand">Krisha's Mall</span>
-
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu">
-
-      <span class="navbar-toggler-icon"></span>
-
-    </button>
-
-    <div class="collapse navbar-collapse" id="menu">
-
-      <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="home">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="about">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="skills">Skills</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="projects">Projects</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="education">Education</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="achievements">Achievements</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="contact">Contact</a>
-        </li>
-
+<nav class="navbar navbar-expand-md fixed-top site-nav" aria-label="Main navigation">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#top">Krisha Patel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav gap-md-4">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#toolkit">Toolkit</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#learning">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-
     </div>
   </div>
-
 </nav>
 
-
-<!-- ================= MALL ================= -->
-
-<main id="mall">
-
-
-<!-- ================= 1. HOME ================= -->
-
-<section id="home" class="store entrance">
-
-  <div class="awning"></div>
-
-  <div class="entrance-body">
-
-    <h1 class="neon">
-      KRISHA'S PORTFOLIO
-    </h1>
-
-    <h2>Krisha Patel</h2>
-
-    <p class="lead mb-1">
-      Computer Science Engineering Student
-    </p>
-
-    <p class="tagline">
-      "Creativity & Code"
-    </p>
-
-    <button class="btn btn-neon btn-lg" id="enterBtn">
-      ENTER MALL →
-    </button>
-
-
-    <!-- DIRECTORY -->
-
-    <div class="directory">
-
-      <p class="dir-title">
-        MALL DIRECTORY &nbsp;·&nbsp; YOU ARE HERE ★
-      </p>
-
-      <div class="row g-2">
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="about">
-            About Me
-            <small>Boutique</small>
-          </button>
+<main id="main">
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="container-xl position-relative">
+    <div class="row align-items-end gy-5">
+      <div class="col-lg-9">
+        <p class="label hero-in" style="--d:.1s">Computer Science Engineering Student</p>
+        <h1 class="hero-in" style="--d:.25s">Krisha<br>Patel</h1>
+        <p class="hero-head hero-in" style="--d:.45s">Building thoughtful digital experiences.</p>
+        <p class="lede hero-in" style="--d:.6s">I’m a Computer Science Engineering student passionate about web development, problem solving, and creating user-friendly applications.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4 hero-in" style="--d:.75s">
+          <a href="#projects" class="btn-lux btn-gold">Explore my work</a>
+          <a href="#contact" class="btn-lux">Get in touch</a>
         </div>
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="skills">
-            Skills
-            <small>Collection</small>
-          </button>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="projects">
-            Projects
-            <small>Store</small>
-          </button>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="education">
-            Education
-            <small>Academy</small>
-          </button>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="achievements">
-            Achievements
-            <small>Showcase</small>
-          </button>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <button class="btn dir-btn" data-target="contact">
-            Contact
-            <small>Exit</small>
-          </button>
-        </div>
-
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= 2. ABOUT ================= -->
-
-<section id="about" class="store">
-
-  <div class="sign">
-    ABOUT ME
-  </div>
-
-  <div class="row align-items-center g-4">
-
-    <div class="col-md-4 text-center">
-
-      <div class="mirror">
-
-        <img
-          src="profile.jpg"
-          alt="Krisha Patel"
-          onerror="this.replaceWith(document.createTextNode('[ADD PROFILE PHOTO]'))">
-
+      <div class="col-lg-3 hero-in" style="--d:.9s">
+        <p class="hero-tag">Developer · Creator · Problem Solver</p>
       </div>
-
     </div>
-
-
-    <div class="col-md-8">
-
-      <h3>
-        Krisha Patel
-      </h3>
-
-      <p class="text-muted">
-        CSE Student
-      </p>
-
-      <p>
-        <b>Introduction:</b>
-        I am a passionate Computer Science Engineering student with a strong focus on web development and problem solving. I enjoy building user-friendly web applications.
-      </p>
-
-      <p>
-        <b>Career Objective:</b>
-        To apply my technical skills and AI enthusiasm to develop innovative, intelligent applications and contribute to cutting-edge tech projects.
-      </p>
-
-      <p>
-        <b>Interests:</b>
-        Artificial Intelligence, Machine Learning, Natural Language Processing
-      </p>
-
-    </div>
-
   </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About"><span>Scroll</span><i></i></a>
+</header>
 
+<!-- ABOUT -->
+<section id="about" class="section light">
+  <div class="container-xl">
+    <div class="row gy-5">
+      <div class="col-lg-4 reveal">
+        <figure class="portrait m-0"><img src="profile.jpg" alt="Portrait of Krisha Patel" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"></figure>
+      </div>
+      <div class="col-lg-7 offset-lg-1 reveal">
+        <p class="label">A little about me</p>
+        <h2>Curious by nature. Building with purpose.</h2>
+        <p class="about-text">I am a passionate Computer Science Engineering student with a strong focus on web development and problem solving. I enjoy building user-friendly web applications.</p>
+        <blockquote class="objective"><span class="label">Career objective</span>To apply my technical skills and AI enthusiasm to develop innovative, intelligent applications and contribute to cutting-edge tech projects.</blockquote>
+        <p class="label mt-5 mb-2">Interests</p>
+        <ul class="tags"><li>Artificial Intelligence</li><li>Machine Learning</li><li>Natural Language Processing</li></ul>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container-xl">
+    <div class="reveal mb-5"><p class="label">Featured projects</p><h2>Selected work</h2></div>
 
-<!-- ================= 3. SKILLS ================= -->
-
-<section id="skills" class="store">
-
-  <div class="sign">
-    MY SKILL COLLECTION
-  </div>
-
-  <h5>
-    Technical Skills
-  </h5>
-
-  <div class="tags">
-
-    <span class="tag">HTML</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JavaScript</span>
-
-    <span class="tag">Python</span>
-    <span class="tag">Java</span>
-    <span class="tag">C/C++</span>
-
-  </div>
-
-  <h5 class="mt-4">
-    Soft Skills
-  </h5>
-
-  <div class="tags">
-
-    <span class="tag soft">Communication</span>
-    <span class="tag soft">Teamwork</span>
-
-    <span class="tag soft">Problem Solving</span>
-    <span class="tag soft">Creativity</span>
-
-  </div>
-
-</section>
-
-
-<!-- ================= 4. PROJECTS ================= -->
-
-<section id="projects" class="store">
-
-  <div class="sign">
-    &#x50;ROJECT COLLECTIO&#x4E;
-  </div>
-
-  <div class="row g-3">
-
-
-    <!-- PROJECT 01 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-img-top img-box">
-
-          <img
-            src="project01.jpg"
-            alt="4 PM Somewhere Coffee Project"
-            class="img-fluid">
-
-        </div>
-
-        <div class="card-body">
-
-          <h5 class="card-title">
-            &#x50;ROJECT 0&#x31;
-          </h5>
-
-          <p class="card-text">
-
-            <strong>
-              &#x34; PM somewhere.
-            </strong>
-
-            <br>
-
-            Coffee for the tired. Cake for the emotional. A table for anyone who needs five quiet minutes.
-
-          </p>
-
-          <p class="small text-muted">
-
-            &#x54;echnologies:
-            HTML, CSS, JavaScript
-
-          </p>
-
-          <a
-            href="https://krisha-2401.github.io/the4pmCafe/"
-            target="_blank"
-            class="btn btn-neon btn-sm">
-
-            &#x56;IEW PROJEC&#x54;
-
+    <!-- 01 featured -->
+    <article class="project featured reveal">
+      <div class="row gy-4 align-items-end">
+        <div class="col-lg-9">
+          <a class="browser café" href="https://krisha-2401.github.io/the4pmCafe/" target="_blank" rel="noopener noreferrer" aria-label="Open The 4 PM Cafe live website">
+            <div class="bar"><i></i><i></i><i></i><span>krisha-2401.github.io/the4pmCafe</span></div>
+            <div class="shot"><span class="fallback">The 4 PM Cafe</span><img src="project01.jpg" alt="Screenshot of The 4 PM Cafe website" loading="lazy" onerror="this.remove()"></div>
           </a>
-
         </div>
-
+        <div class="col-lg-3 p-text">
+          <p class="p-no">01</p>
+          <h3>The 4 PM Cafe</h3>
+          <p class="tagline">4 PM somewhere.</p>
+          <p>Coffee for the tired. Cake for the emotional. A table for anyone who needs five quiet minutes.</p>
+          <p class="tech">HTML · CSS · JavaScript</p>
+          <a class="link-lux" href="https://krisha-2401.github.io/the4pmCafe/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span><span class="visually-hidden">(opens live website in a new tab)</span></a>
+        </div>
       </div>
+    </article>
 
-    </div>
-
-
-    <!-- PROJECT 02 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-img-top img-box">
-
-          <img
-            src="dress.jpg"
-            alt="Style Studio Fashion Project"
-            class="img-fluid">
-
-        </div>
-
-        <div class="card-body">
-
-          <h5 class="card-title">
-            &#x50;ROJECT 0&#x32;
-          </h5>
-
-          <p class="card-text">
-
-            <strong>
-              &#x59;OUR STYLE. YOUR RULES.
-            </strong>
-
-            <br>
-
-            Discover outfits, match colors and create your own perfect look with Style Studio.
-
-          </p>
-
-          <p class="small text-muted">
-
-            &#x54;echnologies:
-            HTML, CSS, JavaScript
-
-          </p>
-
-          <a
-            href="https://krisha-2401.github.io/StyleStudio/"
-            target="_blank"
-            class="btn btn-neon btn-sm">
-
-            &#x56;IEW PROJEC&#x54;
-
+    <!-- 02 -->
+    <article class="project reveal">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-4 offset-lg-1 order-lg-2">
+          <a class="shot-plain style" href="https://krisha-2401.github.io/StyleStudio/" target="_blank" rel="noopener noreferrer" aria-label="Open Style Studio live website">
+            <span class="fallback">Style Studio</span><img src="dress.jpg" alt="Fashion dress image from the Style Studio project" loading="lazy" onerror="this.remove()">
           </a>
-
         </div>
-
+        <div class="col-lg-5 order-lg-1 p-text">
+          <p class="p-no">02</p>
+          <h3>Style Studio</h3>
+          <p class="tagline">Your style. Your rules.</p>
+          <p>Discover outfits, match colors and create your own perfect look with Style Studio.</p>
+          <p class="tech">HTML · CSS · JavaScript</p>
+          <a class="link-lux" href="https://krisha-2401.github.io/StyleStudio/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span><span class="visually-hidden">(opens live website in a new tab)</span></a>
+        </div>
       </div>
+    </article>
 
-    </div>
-
-
-    <!-- PROJECT 03 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-img-top img-box">
-
-          <img
-            src="project03.jpg"
-            alt="Vibe Escape Mood Project"
-            class="img-fluid">
-
-        </div>
-
-        <div class="card-body">
-
-          <h5 class="card-title">
-            &#x50;ROJECT 0&#x33;
-          </h5>
-
-          <p class="card-text">
-
-            <strong>
-              &#x41; LITTLE PLACE FOR YOUR MOO&#x44;
-            </strong>
-
-            <br>
-
-            Pick a mood and build a tiny world around it with music, colors, activities and inspiration.
-
-          </p>
-
-          <p class="small text-muted">
-
-            &#x54;echnologies:
-            HTML, CSS, JavaScript
-
-          </p>
-
-          <a
-            href="https://krisha-2401.github.io/vibescape/"
-            target="_blank"
-            class="btn btn-neon btn-sm">
-
-            &#x56;IEW PROJEC&#x54;
-
+    <!-- 03 -->
+    <article class="project reveal">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-7">
+          <a class="browser vibes" href="https://krisha-2401.github.io/vibescape/" target="_blank" rel="noopener noreferrer" aria-label="Open Vibescape live website">
+            <div class="bar"><i></i><i></i><i></i><span>krisha-2401.github.io/vibescape</span></div>
+            <div class="shot"><span class="fallback">Vibescape</span><img src="project03.jpg" alt="Screenshot of the Vibescape website" loading="lazy" onerror="this.remove()"></div>
           </a>
-
         </div>
-
+        <div class="col-lg-4 offset-lg-1 p-text">
+          <p class="p-no">03</p>
+          <h3>Vibescape</h3>
+          <p class="tagline">A little place for your mood.</p>
+          <p>Pick a mood and build a tiny world around it with music, colors, activities and inspiration.</p>
+          <p class="tech">HTML · CSS · JavaScript</p>
+          <a class="link-lux" href="https://krisha-2401.github.io/vibescape/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span><span class="visually-hidden">(opens live website in a new tab)</span></a>
+        </div>
       </div>
-
-    </div>
-
+    </article>
   </div>
-
 </section>
 
-
-<!-- ================= 5. EDUCATION ================= -->
-
-<section id="education" class="store">
-
-  <div class="sign">
-    EDUCATION
+<!-- TOOLKIT -->
+<section id="toolkit" class="section light">
+  <div class="container-xl">
+    <div class="row gy-5">
+      <div class="col-lg-4 reveal"><p class="label">The toolkit</p><h2>Technical skills</h2></div>
+      <div class="col-lg-7 offset-lg-1 reveal">
+        <ol class="index">
+          <li><span>01</span>HTML</li><li><span>02</span>CSS</li><li><span>03</span>JavaScript</li>
+          <li><span>04</span>Python</li><li><span>05</span>Java</li><li><span>06</span>C/C++</li>
+        </ol>
+        <p class="label mt-5 mb-2">Soft skills</p>
+        <ul class="tags"><li>Communication</li><li>Teamwork</li><li>Problem Solving</li><li>Creativity</li></ul>
+      </div>
+    </div>
   </div>
-
-  <div class="row g-3">
-
-
-    <!-- BTECH -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            B.Tech – Computer Science Engineering
-          </h5>
-
-          <p>
-            INDUS UNIVERSITY
-          </p>
-
-          <p>
-            2024-2028
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- CLASS 12 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            Class 12
-          </h5>
-
-          <p>
-            NATIONAL INSTITUTE OF OPEN SCHOOLING
-          </p>
-
-          <p>
-            2023
-          </p>
-
-          <p>
-            61%
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- CLASS 10 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            Class 10
-          </h5>
-
-          <p>
-            MODERN ENGLISH MEDIUM SCHOOL, SEVALIA
-          </p>
-
-          <p>
-            2021
-          </p>
-
-          <p>
-            78%
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
-
-<!-- ================= 6. ACHIEVEMENTS ================= -->
-
-<section id="achievements" class="store">
-
-  <div class="sign">
-    ACHIEVEMENT SHOWCASE
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="container-xl">
+    <div class="row gy-5">
+      <div class="col-lg-4 reveal"><p class="label">The academic journey</p><h2>Education</h2></div>
+      <div class="col-lg-7 offset-lg-1">
+        <ol class="timeline">
+          <li class="reveal"><span class="when">2024–2028</span><h3>B.Tech — Computer Science Engineering</h3><p>Indus University</p></li>
+          <li class="reveal"><span class="when">2023</span><h3>Class 12</h3><p>National Institute of Open Schooling</p><p class="result">61%</p></li>
+          <li class="reveal"><span class="when">2021</span><h3>Class 10</h3><p>Modern English Medium School, Sevalia</p><p class="result">78%</p></li>
+        </ol>
+      </div>
+    </div>
   </div>
-
-  <div class="row g-3">
-
-
-    <!-- ACHIEVEMENT 01 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            AI-DRIVEN FULL STACK DEVELOPMENT - 60 HOURS
-          </h5>
-
-          <p class="mb-1">
-            INDUS UNIVERSITY
-          </p>
-
-          <p class="mb-1">
-            2026
-          </p>
-
-          <p class="small">
-
-            Completed a comprehensive 60-hour certification program on embedding AI models into modern web applications. Learned to build intelligent, dynamic web platforms using full-stack frameworks and AI APIs.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ACHIEVEMENT 02 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            Full Stack Mobile App Development - 60 Hours
-          </h5>
-
-          <p class="mb-1">
-            INDUS UNIVERSITY
-          </p>
-
-          <p class="mb-1">
-            2025
-          </p>
-
-          <p class="small">
-
-            Mastered cross-platform mobile application development using the Flutter framework. Built scalable frontend UI and backend integration for complete end-to-end mobile solutions.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ACHIEVEMENT 03 -->
-
-    <div class="col-md-4">
-
-      <div class="card h-100">
-
-        <div class="card-body">
-
-          <h5>
-            Embedded Systems with IOT and AI - 60 Hours
-          </h5>
-
-          <p class="mb-1">
-            INDUS UNIVERSITY
-          </p>
-
-          <p class="mb-1">
-            2025
-          </p>
-
-          <p class="small">
-
-            Completed a specialized certification course focusing on integrating IoT devices with artificial intelligence. Gained practical experience in smart system automation and embedded technologies.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
-
-<!-- ================= 7. CONTACT ================= -->
-
-<section id="contact" class="store">
-
-  <div class="sign">
-    THANK YOU FOR VISITING KRISHA'S PORTFOLIO MALL
-  </div>
-
-  <div class="row g-4">
-
-
-    <!-- CONTACT INFO -->
-
-    <div class="col-md-5">
-
-      <p>
-        <b>Email:</b>
-        patelkrisha.24.cse@iite.indusuni.ac.in
-      </p>
-
-      <p>
-        <b>GitHub:</b>
-
-        <a
-          href="https://github.com/Krisha-2401"
-          target="_blank">
-
-          Krisha-2401
-
-        </a>
-
-      </p>
-
-
-      <!-- RESUME -->
-
-      <a
-        class="btn btn-neon"
-        href="resume.png"
-        download>
-
-        DOWNLOAD RESUME
-
-      </a>
-
-      <br><br>
-
-      <!-- BACK TO MALL -->
-
-      <button
-        class="btn btn-neon"
-        id="backToMall">
-
-        ← BACK TO KRISHA'S MALL
-
-      </button>
-
+<!-- CERTIFICATIONS -->
+<section id="learning" class="section light">
+  <div class="container-xl">
+    <div class="reveal mb-5"><p class="label">Continuously learning</p><h2>Achievements &amp; certifications</h2></div>
+    <div class="row gy-5">
+      <article class="col-lg-4 cert reveal"><p class="p-no">01</p><h3>AI-Driven Full Stack Development — 60 Hours</h3><p class="meta">Indus University · 2026</p><p>Completed a comprehensive 60-hour certification program on embedding AI models into modern web applications. Learned to build intelligent, dynamic web platforms using full-stack frameworks and AI APIs.</p></article>
+      <article class="col-lg-4 cert reveal"><p class="p-no">02</p><h3>Full Stack Mobile App Development — 60 Hours</h3><p class="meta">Indus University · 2025</p><p>Mastered cross-platform mobile application development using the Flutter framework. Built scalable frontend UI and backend integration for complete end-to-end mobile solutions.</p></article>
+      <article class="col-lg-4 cert reveal"><p class="p-no">03</p><h3>Embedded Systems with IoT and AI — 60 Hours</h3><p class="meta">Indus University · 2025</p><p>Completed a specialized certification course focusing on integrating IoT devices with artificial intelligence. Gained practical experience in smart system automation and embedded technologies.</p></article>
     </div>
-
-
-    <!-- CONTACT FORM -->
-
-    <div class="col-md-7">
-
-      <form id="contactForm" novalidate>
-
-        <input
-          type="text"
-          id="name"
-          class="form-control mb-2"
-          placeholder="Name">
-
-        <input
-          type="email"
-          id="email"
-          class="form-control mb-2"
-          placeholder="Email">
-
-        <textarea
-          id="message"
-          class="form-control mb-2"
-          rows="3"
-          placeholder="Message"></textarea>
-
-        <button
-          type="submit"
-          class="btn btn-neon">
-
-          Send Message
-
-        </button>
-
-        <p
-          id="formMsg"
-          class="mt-2">
-        </p>
-
-      </form>
-
-    </div>
-
   </div>
-
 </section>
 
-
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="container-xl reveal">
+    <p class="label">Contact</p>
+    <h2 class="contact-title">Have an idea worth building?</h2>
+    <p class="lede">I'm always interested in exploring ideas, creating meaningful digital experiences, and connecting with people who love building things.</p>
+    <div class="d-flex flex-wrap gap-3 mt-4">
+      <a class="btn-lux btn-gold" href="mailto:patelkrisha.24.cse@iite.indusuni.ac.in">Send an email</a>
+      <a class="btn-lux" href="https://github.com/Krisha-2401" target="_blank" rel="noopener noreferrer">GitHub profile<span class="visually-hidden"> (opens in a new tab)</span></a>
+    </div>
+    <p class="mail-line">patelkrisha.24.cse@iite.indusuni.ac.in</p>
+  </div>
+</section>
 </main>
 
-
-<!-- ================= PREVIOUS / NEXT ================= -->
-
-<button
-  class="btn btn-neon arrow"
-  id="prevBtn">
-
-  ← PREVIOUS
-
-</button>
-
-
-<button
-  class="btn btn-neon arrow"
-  id="nextBtn">
-
-  NEXT →
-
-</button>
-
-
-<!-- ================= BOOTSTRAP JS ================= -->
+<footer class="site-footer">
+  <div class="container-xl d-flex flex-column flex-sm-row justify-content-between gap-2">
+    <span>Krisha Patel · © <span id="year">2026</span></span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- YOUR JAVASCRIPT -->
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
